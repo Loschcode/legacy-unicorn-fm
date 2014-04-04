@@ -10,12 +10,23 @@
 
     <div class="col-md-6 col-md-offset-3">
     <div class="page-header">
-            <h1><strong>Unicorn.</strong> <br/> <small>Manage your music like a boss</small></h1>
+            <h1>
+                <strong>Unicorn.</strong> <br/>
+                <small>Manage your music like a boss</small><br/>
+                <div class="spacer10"></div>
+                <% if (owner == true) { %>
+                    <small><span class="label label-dangerw">Server #<%= server %></span></small>
+                <% } else { %>
+                    <small><span class="label label-warning">Joined #<%= server %></span></small>
+                <% } %>
+            </h1>
         </div>
+
     <form method="post" action="#/search" class="form-inline">
     	<input id="search-track" class="form-control input-lg" type="text" name="search" placeholder="Search track to listen" autocomplete="off"/>
     
     	<button type="submit" class="btn btn-black btn-lg" href="#/search">Search</button>
+        <a id="clear-results" class="btn btn-danger"></a>
     </form>
 
     <hr>
