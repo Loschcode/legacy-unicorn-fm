@@ -1,0 +1,15 @@
+.btn-pink {
+  color: #ce4072;
+  border: 2px solid #ce4072; }
+  .btn-pink:hover {
+    color: white;
+    background-color: #ce4072; }
+
+.w100 {
+  width: 100%; }
+
+h1 strong {
+  font-size: 60px; }
+
+#results-search {
+  margin-top: 2em; }
