@@ -124,13 +124,24 @@
             
             var player = value.media$group.media$player[0].url;
 
+            var durationSeconds = value.media$group.yt$duration.seconds;
+
+            // multiplied  by 1000 because Date() requires miliseconds
+            var date = new Date(durationSeconds * 1000);
+            var mm = date.getUTCMinutes();
+            var ss = date.getSeconds();
+            if (mm < 10) {mm = "0"+mm;}
+            if (ss < 10) {ss = "0"+ss;}
+
+            var duration = mm + ':' + ss;
+
             var number_list = index + 1;
             var title = value.media$group.media$title.$t;
             var picture = value.media$group.media$thumbnail[0].url;
             var description = value.media$group.media$description.$t;
 
             output += '<div class="entry">';
-            output += '<div class="pull-left">' + title + '</div>';
+            output += '<div class="pull-left"><span class="title">' + number_list + '. ' + title + '</span> <span class="duration">' + duration + '</span></div>';
             output += '<div class="pull-right"><button id="push" data-title="' + title + '" data-player="' + player + '" class="btn btn-black"><i class="fa fa-cloud-upload"></i> Push</button></div>';
             output += '</div>';
 

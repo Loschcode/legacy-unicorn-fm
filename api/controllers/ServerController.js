@@ -70,6 +70,7 @@ module.exports = {
 
   create: function (req, res) {
 
+    /*
     var randomString = require('random-string');
     var name = randomString({
       length: 4,
@@ -77,7 +78,12 @@ module.exports = {
       letters: true,
       special: false
     });
+    */
 
+    var string = require('../helpers/string.js');
+
+    name = string.randomReadable(4);
+    console.log(name);
     name = name.toLowerCase();
 
     var current_session = req.sessionID;

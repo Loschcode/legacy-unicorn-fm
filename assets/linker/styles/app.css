@@ -46,14 +46,20 @@
   width: 480px;
   height: 360px; }
 
-/* line 77, app.sass */
+/* line 57, app.sass */
+.entry .duration {
+  color: #7f8c8d;
+  display: inline-block;
+  margin-left: 0.4em; }
+
+/* line 83, app.sass */
 .w100 {
   width: 100%; }
 
-/* line 81, app.sass */
+/* line 87, app.sass */
 h1 strong {
   font-size: 60px; }
 
-/* line 84, app.sass */
+/* line 90, app.sass */
 #results-search {
   margin-top: 2em; }
