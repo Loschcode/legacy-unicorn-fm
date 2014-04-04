@@ -1,7 +1,7 @@
-<div id="join-datas" data-owner="<%= owner %>"></div>
+<div id="join-datas" data-owner="<%= owner %>" data-server="<%= server %>"></div>
 
 <div class="notice notice-black">
-    No current track
+    <span id="current-track">No current track</span>
 </div>
 
 <div class="spacer50"></div>
@@ -9,24 +9,29 @@
 <div class="container text-center">
 
     <div class="col-md-6 col-md-offset-3">
-
+    <div class="page-header">
+            <h1><strong>Unicorn.</strong> <br/> <small>Manage your music like a boss</small></h1>
+        </div>
     <form method="post" action="#/search" class="form-inline">
-    	<input id="search-track" class="form-control input-lg" type="text" name="search" placeholder="Search track to listen" />
+    	<input id="search-track" class="form-control input-lg" type="text" name="search" placeholder="Search track to listen" autocomplete="off"/>
     
-    	<button type="submit" class="btn btn-primary btn-lg" href="#/search">Search</button>
+    	<button type="submit" class="btn btn-black btn-lg" href="#/search">Search</button>
     </form>
 
     <hr>
+</div>
     
+    <div class="clear"></div>
+    <div class="spacer20"></div>
+
     <div id="results-search">
     </div>
 
-    <br/><br/>
-
+<div class="container">
 
     <div id="player">
     </div>
 
  
-	</div>
+</div>
 

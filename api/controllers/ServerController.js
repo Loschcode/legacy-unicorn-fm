@@ -19,26 +19,15 @@ module.exports = {
   
   pushTrack: function(req, res) {
 
-    Track.create({
+    var server = req.param('server');
+    var track = {title: req.param('title'), player: req.param('player'), server: server}
 
-      title: req.param('title'),
-      player: req.param('player')
+    var socket = req.socket;
+    var io = sails.io;
 
-    }).done(function (error, track) {
+    io.sockets.emit('message', track);
 
-      if (error) {
-        res.json({error: true, details: error});
-      } else {
-
-        var socket = req.socket;
-        var io = sails.io;
-
-        io.sockets.emit('message', track);
-
-        res.json(track);
-      }
-
-    });
+    res.json(track);
 
   },
 
@@ -70,7 +59,7 @@ module.exports = {
           var owner = false;
         }
 
-        res.view({owner: owner});
+        res.view({owner: owner, server: server_name, title: 'Unicorn'});
 
       }
 

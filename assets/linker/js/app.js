@@ -26,13 +26,36 @@
       // to run when a new message arrives from the Sails.js
       // server.
       ///////////////////////////////////////////////////////////
-      
-      var player = message.player;
-      player = player.split('https://www.youtube.com/watch?v=').join('');
-      player = player.split('&feature=youtube_gdata_player').join('');
+      var server = message.server;
+      var joinServer = $('#join-datas').data('server');
+      console.log('fired');
 
-      player = '<iframe width="560" height="315" src="http://www.youtube.com/embed/' + player + '?autoplay=1" frameborder="0" allowfullscreen></iframe>';
-      $('#current-track').html(player);
+      console.log(server);
+      console.log(joinServer);
+
+      if (server == joinServer) {
+
+        var owner = $('#join-datas').data('owner');
+
+        console.log(owner);
+
+        if (owner == true) {
+
+          console.log('into');
+          var player = message.player;
+          player = player.split('https://www.youtube.com/watch?v=').join('');
+          player = player.split('&feature=youtube_gdata_player').join('');
+
+          player = '<iframe width="560" height="315" src="http://www.youtube.com/embed/' + player + '?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+          
+          $('#player').html(player);
+
+        }
+
+        var title = message.title;
+
+        $('#current-track').html(title);
+      }
 
       //////////////////////////////////////////////////////
 
@@ -84,7 +107,7 @@
 
       // Get the track to search
       var track = $('#search-track').val();
-      var max_results = 1;
+      var max_results = 20;
 
       var query = 'https://gdata.youtube.com/feeds/api/videos?alt=@type&q=@search&max-results=@max-results';
 
@@ -95,7 +118,7 @@
       $.get(query, function( data ) {
 
         var results = data.feed.entry;
-        var output = '<table class="table"><tbody>';
+        var output = '';
 
         $.each(results, function(index, value) {
           
@@ -106,11 +129,16 @@
           var picture = value.media$group.media$thumbnail[0].url;
           var description = value.media$group.media$description.$t;
 
-          output += '<tr><td>' + title + ' <button id="push" data-title="' + title + '" data-player="' + player + '">Push</button></td></tr>';
+          output += '<div class="entry">';
+          output += '<div class="pull-left">' + title + '</div>';
+          output += '<div class="pull-right"><button id="push" data-title="' + title + '" data-player="' + player + '" class="btn btn-black"><i class="fa fa-cloud-upload"></i> Push</button></div>';
+          output += '</div>';
+
+          output += '<div class="clear"></div><hr>';
 
         });
 
-        output += '</tbody></table>';
+        output += '';
 
         $('#results-search').html(output);
 
@@ -142,9 +170,13 @@
 
     var title = $(this).data('title');
     var player = $(this).data('player');
+    var server = $('#join-datas').data('server');
 
-    $.post('/push-track', {title: title, player: player}, function(datas) {
+    selector = $(this);
+
+    $.post('/push-track', {title: title, player: player, server: server}, function(datas) {
       console.log(datas);
+      selector.html('Pushed !');
     }); 
   });
 

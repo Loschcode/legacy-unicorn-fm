@@ -36,14 +36,24 @@
   border: 3px solid #cdcdcd;
   box-shadow: none; }
 
-/* line 69, app.sass */
+/* line 46, app.sass */
+.btn.btn-black {
+  background-color: #333333;
+  color: white; }
+
+/* line 52, app.sass */
+.player {
+  width: 480px;
+  height: 360px; }
+
+/* line 77, app.sass */
 .w100 {
   width: 100%; }
 
-/* line 73, app.sass */
+/* line 81, app.sass */
 h1 strong {
   font-size: 60px; }
 
-/* line 76, app.sass */
+/* line 84, app.sass */
 #results-search {
   margin-top: 2em; }
