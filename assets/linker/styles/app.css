@@ -42,24 +42,59 @@
   color: white; }
 
 /* line 52, app.sass */
-.player {
-  width: 480px;
-  height: 360px; }
+#player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2em; }
+  /* line 60, app.sass */
+  #player iframe, #player object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
-/* line 57, app.sass */
+/* line 69, app.sass */
 .entry .duration {
   color: #7f8c8d;
   display: inline-block;
   margin-left: 0.4em; }
 
-/* line 83, app.sass */
+@media only screen and (max-width: 767px) {
+  /* line 79, app.sass */
+  #search-track {
+    margin-bottom: 1em; }
+
+  /* line 83, app.sass */
+  h1 small {
+    font-size: 16px; }
+    /* line 86, app.sass */
+    h1 small span.label {
+      font-size: 16px; }
+
+  /* line 90, app.sass */
+  .entry .pull-left {
+    float: none !important; }
+  /* line 92, app.sass */
+  .entry .pull-right {
+    float: none !important; }
+  /* line 95, app.sass */
+  .entry .duration {
+    margin-left: none;
+    margin-top: 0.3em;
+    margin-bottom: 0.6em;
+    display: block; } }
+/* line 103, app.sass */
 .w100 {
   width: 100%; }
 
-/* line 87, app.sass */
+/* line 107, app.sass */
 h1 strong {
   font-size: 60px; }
 
-/* line 90, app.sass */
+/* line 110, app.sass */
 #results-search {
   margin-top: 2em; }
