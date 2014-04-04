@@ -1,17 +1,34 @@
-<div class="spacer30"></div>
+
+<% if (req.session.errorMsg) { %>
+    <div class="notice notice-error"><%= req.session.errorMsg %></div>
+<% delete req.session.errorMsg; } %>
+
+<div class="spacer50"></div>
 
 <div class="container text-center">
 
+    <!-- Logo + Punchline -->
     <div class="col-md-6 col-md-offset-3">
-    <div class="page-header">
-        <h1><strong>Unicorn.</strong> <br/> <small>Manage your music like a boss</small></h1>
-    </div>
-    <div class="pull-left col-md-6">
-                    <a class="btn btn-lg btn-primary w100"><i class="fa fa-cloud-upload"></i> Join</a>
+        <div class="page-header">
+            <h1><strong>Unicorn.</strong> <br/> <small>Manage your music like a boss</small></h1>
+        </div>
 
-        </div>
-        <div class="pull-right col-md-6">
-            <a href="/create" class="btn btn-lg btn-primary w100"><i class="fa fa-cloud"></i> Create</a>
-        </div>
+            <div>
+                <div id="join-form" class="hidden">
+                    <form method="post" action="#/try-join">
+                        <input id="join-name" class="form-control input-lg" placeholder="Flowers" name="name" autocomplete="off" /><br/>
+                        <button type="submit" class="btn btn-lg btn-primary w100"><i class="fa fa-cloud-upload"></i> Join</button>
+                    </form>
+                </div>
+
+                <div id="join-link" class="show">
+                    <a class="btn btn-lg btn-primary w100" href="#/join"><i class="fa fa-cloud-upload"></i> Join</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="spacer10"></div>
+            <div>
+                <a href="/create" class="btn btn-lg btn-primary w100"><i class="fa fa-cloud"></i> Create</a>
+            </div>
     </div>
 </div>

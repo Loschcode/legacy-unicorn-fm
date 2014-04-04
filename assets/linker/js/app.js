@@ -118,6 +118,24 @@
 
     });
 
+    this.get('#/join', function() {
+      $('#join-link').removeClass('show').addClass('hidden');
+      $('#join-form').removeClass('hidden').addClass('show');
+      $('#join-name').focus();
+    });
+
+    this.post('#/try-join', function() {
+
+      // Get value of the input text
+      var name = $('#join-name').val();
+
+      // If not empty
+      if (name != '') {
+        location.href='join/' + name;
+      }
+
+    });
+
   });       
   
   $(document).on('click', 'button#push', function() {
@@ -129,6 +147,7 @@
       console.log(datas);
     }); 
   });
-        
+
+
   app.run();
 

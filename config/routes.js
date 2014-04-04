@@ -34,7 +34,7 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': 'Home.index',
   '/create': 'Server.create',
-  '/join/:id': 'Server.join',
+  '/join/:name': 'Server.join',
   '/push-track': 'Server.pushTrack'
 
   /*

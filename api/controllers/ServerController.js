@@ -44,9 +44,38 @@ module.exports = {
 
   join: function (req, res) {
     
-    var server_id = req.params.id;
+    // Get the server name to join
+    var server_name = req.params.name;
 
-    res.view();
+    // Check if the server exists
+    Server.findOne({
+      name: server_name
+    }).done(function(error, server) {
+
+      // Error query or no result match !
+      if (error || typeof error == 'undefined') {
+
+        // Create session
+        req.session.errorMsg = 'Unable to join this server';
+
+        // Redirect to index
+        res.redirect('/#/join');
+
+      } else {
+        
+        // Check if the user it's the owner of the server
+        if (req.sessionID == server.owner) {
+          var owner = true;
+        } else {
+          var owner = false;
+        }
+
+        res.view({owner: owner});
+
+      }
+
+    });
+
 
   },
 
@@ -69,9 +98,9 @@ module.exports = {
       name: name
     }).done(function(error, server) {
 
-      if (error) {
+      if (typeof server !== 'undefined') {
 
-        // Unable to create the server
+        // Server already created
         // So we auto redirect the user in this
         // method, to re-try create server
         res.redirect('/create');
@@ -92,7 +121,7 @@ module.exports = {
           } else {
 
             // Auto join the server created
-            res.redirect('/join/' + server.id);
+            res.redirect('/join/' + server.name);
           }
 
         });

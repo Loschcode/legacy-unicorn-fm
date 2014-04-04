@@ -16,7 +16,6 @@
  */
 
 module.exports = {
-    
   
   /**
    * Action blueprints:
@@ -25,7 +24,8 @@ module.exports = {
    */
    index: function (req, res) {
     
-    res.view();
+    // Load view home and set title
+    res.view({title: 'Unicorn'});
     
   },
 

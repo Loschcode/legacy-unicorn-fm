@@ -1,15 +1,49 @@
-.btn-pink {
-  color: #ce4072;
-  border: 2px solid #ce4072; }
-  .btn-pink:hover {
-    color: white;
-    background-color: #ce4072; }
+/* line 17, app.sass */
+.spacer50 {
+  margin-top: 50px; }
 
+/* line 19, app.sass */
+.spacer10 {
+  margin-top: 10px; }
+
+/* line 21, app.sass */
+.spacer20 {
+  margin-top: 20px; }
+
+/* line 24, app.sass */
+.clear {
+  clear: both; }
+
+/* line 27, app.sass */
+.notice {
+  width: 100%;
+  background-color: #e74c3c;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  color: white; }
+
+/* line 34, app.sass */
+.notice-error {
+  background-color: #e74c3c; }
+
+/* line 36, app.sass */
+.notice-black {
+  background-color: #333333; }
+
+/* line 41, app.sass */
+.form-control, .form-control:focus {
+  border: 3px solid #cdcdcd;
+  box-shadow: none; }
+
+/* line 69, app.sass */
 .w100 {
   width: 100%; }
 
+/* line 73, app.sass */
 h1 strong {
   font-size: 60px; }
 
+/* line 76, app.sass */
 #results-search {
   margin-top: 2em; }
