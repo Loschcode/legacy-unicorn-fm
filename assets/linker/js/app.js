@@ -28,20 +28,13 @@
       ///////////////////////////////////////////////////////////
       var server = message.server;
       var joinServer = $('#join-datas').data('server');
-      console.log('fired');
-
-      console.log(server);
-      console.log(joinServer);
 
       if (server == joinServer) {
 
         var owner = $('#join-datas').data('owner');
 
-        console.log(owner);
-
         if (owner == true) {
 
-          console.log('into');
           var player = message.player;
           player = player.split('https://www.youtube.com/watch?v=').join('');
           player = player.split('&feature=youtube_gdata_player').join('');
@@ -120,25 +113,32 @@
         var results = data.feed.entry;
         var output = '';
 
-        $.each(results, function(index, value) {
-          
-          var player = value.media$group.media$player[0].url;
+        // Have we got results from this search ?
+        if (results.length > 0) {
 
-          var number_list = index + 1;
-          var title = value.media$group.media$title.$t;
-          var picture = value.media$group.media$thumbnail[0].url;
-          var description = value.media$group.media$description.$t;
+          // Add button to clear results (nested search button)
+          $('#clear-results').removeClass('hidden');
 
-          output += '<div class="entry">';
-          output += '<div class="pull-left">' + title + '</div>';
-          output += '<div class="pull-right"><button id="push" data-title="' + title + '" data-player="' + player + '" class="btn btn-black"><i class="fa fa-cloud-upload"></i> Push</button></div>';
-          output += '</div>';
+          // Loop all results
+          $.each(results, function(index, value) {
+            
+            var player = value.media$group.media$player[0].url;
 
-          output += '<div class="clear"></div><hr>';
+            var number_list = index + 1;
+            var title = value.media$group.media$title.$t;
+            var picture = value.media$group.media$thumbnail[0].url;
+            var description = value.media$group.media$description.$t;
 
-        });
+            output += '<div class="entry">';
+            output += '<div class="pull-left">' + title + '</div>';
+            output += '<div class="pull-right"><button id="push" data-title="' + title + '" data-player="' + player + '" class="btn btn-black"><i class="fa fa-cloud-upload"></i> Push</button></div>';
+            output += '</div>';
 
-        output += '';
+            output += '<div class="clear"></div><hr>';
+
+          });
+
+        }
 
         $('#results-search').html(output);
 
@@ -166,6 +166,22 @@
 
   });       
   
+  $(document).on('click', '#clear-results', function() {
+
+    // Clear results search
+    $('#results-search').html('');
+
+    // Hide button to clear results
+    $(this).addClass('hidden');
+
+    // Clear search
+    $('#search-track').val('');
+
+    // Give focus
+    $('#search-track').focus();
+
+  });
+
   $(document).on('click', 'button#push', function() {
 
     var title = $(this).data('title');
@@ -175,7 +191,6 @@
     selector = $(this);
 
     $.post('/push-track', {title: title, player: player, server: server}, function(datas) {
-      console.log(datas);
       selector.html('Pushed !');
     }); 
   });
