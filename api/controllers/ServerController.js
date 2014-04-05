@@ -36,6 +36,9 @@ module.exports = {
     // Get the server name to join
     var server_name = req.params.name;
 
+    // Security, because findOne() isn't sensitive
+    server_name = server_name.toLowerCase();
+
     // Check if the server exists
     Server.findOne({
       name: server_name
