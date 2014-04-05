@@ -110,11 +110,23 @@
 
       $.get(query, function( data ) {
 
+        // Clear results search
+        $('#results-search').html('');
+
+        // Hide button to clear results
+        $(this).addClass('hidden');
+
+        // Add loading
+        $('#results-search').html('<i class="fa fa-repeat fa-spin fa-3x"></i>');
+
         var results = data.feed.entry;
         var output = '';
 
         // Have we got results from this search ?
         if (results.length > 0) {
+
+          // Hide loader
+          $('#results-search').html('');
 
           // Add button to clear results (nested search button)
           $('#clear-results').removeClass('hidden');
@@ -148,10 +160,15 @@
             output += '<div class="clear"></div><hr>';
 
           });
+          
+          $('#results-search').html(output);
+
+        } else {
+
+          $('#results-search').html('Ooops, no results dude !');
 
         }
 
-        $('#results-search').html(output);
 
       });
 
