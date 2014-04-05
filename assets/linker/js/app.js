@@ -165,7 +165,7 @@
 
         } else {
 
-          $('#results-search').html('Ooops, no results dude !');
+          $('#results-search').html('<strong>Ooops, no results dude !</strong>');
 
         }
 
