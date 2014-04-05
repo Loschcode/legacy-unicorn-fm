@@ -201,8 +201,14 @@
 
     selector = $(this);
 
+    selector.html('Pushing ...');
+
     $.post('/push-track', {title: title, player: player, server: server}, function(datas) {
       selector.html('Pushed !');
+      setTimeout(function() {
+        selector.html('<i class="fa fa-cloud-upload"></i> Push');
+      }, 2000);
+
     }); 
   });
 
