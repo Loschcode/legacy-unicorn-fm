@@ -48,6 +48,10 @@
         var title = message.title;
 
         $('#current-track').html(title);
+
+        // Send notification
+        alertify.log(title);
+        
       }
 
       //////////////////////////////////////////////////////
