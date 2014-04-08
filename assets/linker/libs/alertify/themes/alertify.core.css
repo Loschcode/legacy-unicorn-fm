@@ -31,13 +31,7 @@
 	.alertify-cover-hidden {
 		display: none;
 	}
-.alertify {
-	position: fixed; z-index: 99999;
-	top: 50px; left: 50%;
-	width: 550px;
-	margin-left: -275px;
-	opacity: 1;
-}
+
 	.alertify-hidden {
 		-webkit-transform: translate(0,-150px);
 		   -moz-transform: translate(0,-150px);

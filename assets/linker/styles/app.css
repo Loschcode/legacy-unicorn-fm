@@ -94,15 +94,18 @@
     margin-left: none;
     margin-top: 0.3em;
     margin-bottom: 0.6em;
-    display: block; } }
-/* line 107, app.sass */
+    display: block; }
+  /* line 105, app.sass */
+  .entry button#push {
+    width: 100%; } }
+/* line 110, app.sass */
 .w100 {
   width: 100%; }
 
-/* line 111, app.sass */
+/* line 114, app.sass */
 h1 strong {
   font-size: 60px; }
 
-/* line 114, app.sass */
+/* line 117, app.sass */
 #results-search {
   margin-top: 2em; }
