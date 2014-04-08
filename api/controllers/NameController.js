@@ -29,8 +29,10 @@ module.exports = {
       var lastName = false;
 
       // Found
-      if (typeof nameMongo !== 'undefined') {
+      if (typeof nameMongo !== 'undefined' && nameMongo.length >= 1) {
+
         lastName = nameMongo[0].name;
+
       } 
 
       res.view({lastName: lastName});

@@ -30,7 +30,7 @@ module.exports = {
     var redirectTo = req.param('redirect-to');
 
     // Check if the right password
-    if (password === 'unicornrocks') {
+    if (password == 'unicornrocks') {
 
       // Ok, now you are logged as admin
       req.session.isAnAdmin = true;
