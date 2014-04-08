@@ -58,7 +58,7 @@
 		opacity: 1;
 	}
 	.alertify-log-hide {
-
+		display: none;
 		opacity: 0;
 	}
 	.alertify-dialog {
