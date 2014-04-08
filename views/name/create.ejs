@@ -22,5 +22,13 @@
             <button type="submit" class="btn btn-lg btn-primary w100">Create</button>
         </form>
 
+        <div class="spacer20"></div>
+
+        <% if (lastName) { %>
+            <div class="notice notice-black">
+                Last name added : <em><%= lastName %></em>
+            </div>
+        <% } %>
+
     </div>
 </div>

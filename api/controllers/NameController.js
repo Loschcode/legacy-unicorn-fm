@@ -19,7 +19,24 @@ module.exports = {
     
   create: function(req, res) {
 
-  	res.view();
+    // Find last name
+    Name.find()
+    .sort('createdAt desc')
+    .limit(1)
+    .exec(function(err, nameMongo) {
+
+      // Init last name
+      var lastName = false;
+
+      // Found
+      if (typeof nameMongo !== 'undefined') {
+        lastName = nameMongo[0].name;
+      } 
+
+      res.view({lastName: lastName});
+
+    });
+
 
   },
 
@@ -31,6 +48,9 @@ module.exports = {
 
     // Get the name
   	var name = req.param('name');
+
+    // Security
+    var name = name.toLowerCase();
 
     if (string(name).isEmpty()) {
       req.session.error = 'Name can\'t be empty';
