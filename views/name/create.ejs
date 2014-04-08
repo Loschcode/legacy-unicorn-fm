@@ -1,0 +1,26 @@
+
+<% if (req.session.error) { %>
+    <div class="notice notice-error"><%= req.session.error %></div>
+<% delete req.session.error; } %>
+
+<% if (req.session.success) { %>
+    <div class="notice notice-success"><%= req.session.success %></div>
+<% delete req.session.success; } %>
+
+<div class="spacer50"></div>
+
+<div class="container text-center">
+
+    <!-- Logo + Punchline -->
+    <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+            <h1><strong>Unicorn.</strong> <br/> <small>Manage your music like a boss</small></h1>
+        </div>
+
+        <form method="post" action="/create-name-exec">
+            <input class="form-control input-lg" placeholder="The name" name="name" autocomplete="off" spellcheck="false" /><br/>
+            <button type="submit" class="btn btn-lg btn-primary w100">Create</button>
+        </form>
+
+    </div>
+</div>

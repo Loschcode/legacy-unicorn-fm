@@ -14,8 +14,6 @@ var randomReadable = function (chars) {
 
 	randomString = '';
 
-	console.log(max);
-
 	i = 0;
 
 	while (i != max) {
@@ -32,6 +30,21 @@ var randomReadable = function (chars) {
 
 }
 
+var countWords = function (word) {
+
+	if (typeof word == 'undefined') {
+		return false;
+	}
+
+	var partsWord = word.split(' ').filter(function(element, pos, self) {
+  		return element !== '';
+  	});
+
+  	return partsWord.length;
+}
+
+
 module.exports = {
-	randomReadable: randomReadable
+	randomReadable: randomReadable,
+	countWords: countWords,
 }

@@ -35,7 +35,9 @@ module.exports.routes = {
   '/': 'Home.index',
   '/create': 'Server.create',
   '/join/:name': 'Server.join',
-  '/push-track': 'Server.pushTrack'
+  '/push-track': 'Server.pushTrack',
+  '/create-name': 'Name.create',
+  '/create-name-exec': 'Name.createExec'
 
   /*
   // But what if you want your home page to display
