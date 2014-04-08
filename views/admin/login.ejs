@@ -20,26 +20,21 @@
         <div class="spacer10"></div>
 
         <div>
-            Here you can add some server names that will be used on server creation !
+            Please login
         </div>
-
 
         <div class="spacer10"></div>
 
         <hr>
 
-        <form method="post" action="/create-name-exec">
-            <input class="form-control input-lg" placeholder="The name" name="name" autocomplete="off" spellcheck="false" /><br/>
-            <button type="submit" class="btn btn-lg btn-primary w100">Add name for Unicorn servers</button>
+        <form method="post" action="/admin/login-exec">
+            <input type="password" class="form-control input-lg" name="password" autocomplete="off" spellcheck="false" />
+            <input type="hidden" name="redirect-to" value="<%= req.session.redirectTo %>" />
+            <br/>
+            <button type="submit" class="btn btn-lg btn-primary w100">Log in</button>
         </form>
 
         <div class="spacer40"></div>
-
-        <% if (lastName) { %>
-            <div class="notice notice-black">
-                Last name added : <em><%= lastName %></em>
-            </div>
-        <% } %>
 
     </div>
 </div>

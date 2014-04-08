@@ -37,7 +37,10 @@ module.exports.routes = {
   '/join/:name': 'Server.join',
   '/push-track': 'Server.pushTrack',
   '/create-name': 'Name.create',
-  '/create-name-exec': 'Name.createExec'
+  '/create-name-exec': 'Name.createExec',
+  '/admin/login': 'Admin.login',
+  '/admin/login-exec': 'Admin.loginExec',
+  '/admin/logout': 'Admin.logout'
 
   /*
   // But what if you want your home page to display
