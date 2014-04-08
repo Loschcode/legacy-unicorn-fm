@@ -73,60 +73,110 @@ module.exports = {
 
   create: function (req, res) {
 
-    /*
-    var randomString = require('random-string');
-    var name = randomString({
-      length: 4,
-      numeric: false,
-      letters: true,
-      special: false
-    });
-    */
+    // Find before pretty name if never tried (into the database)
+    if (req.session.alreadyTryFindName !== true) {
 
-    var string = require('../helpers/string.js');
+      // Find all
+      Name.find().done(function(err, nameMongo) {
 
-    name = string.randomReadable(4);
-    console.log(name);
-    name = name.toLowerCase();
+        // Count nb records found
+        var countNames = nameMongo.length;
 
-    var current_session = req.sessionID;
+        if (countNames > 0) {
 
-    // Check if name exists
-    Server.findOne({
-      name: name
-    }).done(function(error, server) {
+          // Random find 
+          var name = nameMongo[Math.floor(Math.random() * countNames)].name;
 
-      if (typeof server !== 'undefined') {
+          // We will use this name
+          req.session.useName = name;
 
-        // Server already created
-        // So we auto redirect the user in this
-        // method, to re-try create server
+        } else {
+
+          // No name found, so we can't use ...
+          req.session.useName = false;
+        }
+
+        // Tell to the system : Hey dude i tried to find a pretty name
+        req.session.alreadyTryFindName = true;
+
+        // Redirect to this method
+        // to continue the script
         res.redirect('/create');
 
+      });
+
+    } else {
+
+      // We already try to find a pretty name for this server
+
+      // We init a name var (In effect, it's really helpful to know this ...)
+      var name = '';
+
+      // Check if we found a pretty name to use
+      if (req.session.useName === false) {
+
+        // No ? Ok we will generate a random string
+        var string = require('../helpers/extends_string.js');
+
+        name = string.randomReadable(4);
+        name = name.toLowerCase();
+
       } else {
-        
-        // We will create the server
-        Server.create({
-          name: name,
-          owner: current_session
 
-        }).done(function(error, server) {
-
-          if (error) {
-
-            res.send('Error : Problem when we created the server');
-            
-          } else {
-
-            // Auto join the server created
-            res.redirect('/join/' + server.name);
-          }
-
-        });
-
+        // Yes we found a pretty name
+        var name = req.session.useName;
 
       }
-    });
+
+      // We used the name or not, but we must do this
+      // to avoid end-less loop
+      req.session.useName = false;
+
+      // Get the current session of the user
+      var current_session = req.sessionID;
+
+      // Check if name exists
+      Server.findOne({
+        name: name
+      }).done(function(error, server) {
+
+        if (typeof server !== 'undefined') {
+
+          // Server already created
+          // So we auto redirect the user in this
+          // method, to re-try create server
+          res.redirect('/create');
+
+        } else {
+          
+          // We will create the server
+          Server.create({
+            name: name,
+            owner: current_session
+
+          }).done(function(error, server) {
+
+            if (error) {
+
+              res.send('Error : Problem when we created the server');
+              
+            } else {
+
+              // Delete some sessions
+              delete req.session.useName;
+              delete req.session.alreadyTryFindName;
+
+              // Auto join the server created
+              res.redirect('/join/' + server.name);
+            }
+
+          });
+
+
+        }
+      });
+
+    }
 
   }
 
