@@ -23,12 +23,21 @@ module.exports = {
    *    `/home`
    */
    index: function (req, res) {
-    
+
     // Load view home and set title
     res.view({title: 'Unicorn'});
     
   },
 
+  test: function(req, res) {
+        var io = sails.io;
+
+    io.sockets.on('connection', function (socket) {
+      socket.emit('message', { hello: 'world' });
+    });
+
+    res.view();
+  },
 
 
 

@@ -40,7 +40,8 @@ module.exports.routes = {
   '/create-name-exec': 'Name.createExec',
   '/admin/login': 'Admin.login',
   '/admin/login-exec': 'Admin.loginExec',
-  '/admin/logout': 'Admin.logout'
+  '/admin/logout': 'Admin.logout',
+  '/test': 'Home.test'
 
   /*
   // But what if you want your home page to display

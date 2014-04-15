@@ -6,12 +6,13 @@
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/linker/styles/app.css">
-    <link rel="stylesheet" href="/linker/libs/alertify/themes/alertify.core.css">
-    <link rel="stylesheet" href="/linker/libs/alertify/themes/alertify.default.css">
 
   </head>
 
@@ -19,14 +20,8 @@
 
     <%- body %>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="/linker/js/sammy.js"></script>
-    <script src="/linker/js/socket.io.js"></script>
-    <script src="/linker/js/sails.io.js"></script>
-    <script src="/linker/libs/alertify/src/alertify.js"></script>
-    <script src="/linker/js/app.js"></script>
-
+    <!-- Load app frontend -->
+    <script data-main="/linker/js/core/loader" src="/linker/js/core/require.js"></script>
 
 
   </body>

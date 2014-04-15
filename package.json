@@ -1,8 +1,8 @@
 {
-    "name": "unicorn2",
+    "name": "unicorn",
     "private": true,
     "version": "0.0.0",
-    "description": "a Sails application",
+    "description": "Manage your music like a boss",
     "dependencies": {
         "sails": "0.9.15",
         "grunt": "0.4.1",
@@ -16,6 +16,6 @@
     },
     "main": "app.js",
     "repository": "",
-    "author": "",
-    "license": ""
+    "author": "Ges Jeremie",
+    "license": "No open source"
 }

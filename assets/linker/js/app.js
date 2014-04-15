@@ -50,8 +50,8 @@
         $('#current-track').html(title);
 
         // Send notification
-        alertify.log(title);
-        
+        alertify.log('<img src="http://localhost:1337/images/0.png" /> ' + title);
+
       }
 
       //////////////////////////////////////////////////////
