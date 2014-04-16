@@ -6,7 +6,7 @@ define({
 	},
 
 	hbs: {
-		templateExtension: "hbs"
+		templateExtension: '.hbs'
 	}
 }); 
 

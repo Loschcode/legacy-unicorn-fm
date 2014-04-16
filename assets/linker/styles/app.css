@@ -1,24 +1,18 @@
-/* line 17, app.sass */
 .spacer50 {
   margin-top: 50px; }
 
-/* line 19, app.sass */
 .spacer10 {
   margin-top: 10px; }
 
-/* line 21, app.sass */
 .spacer20 {
   margin-top: 20px; }
 
-/* line 23, app.sass */
 .spacer40 {
   margin-top: 40px; }
 
-/* line 26, app.sass */
 .clear {
   clear: both; }
 
-/* line 29, app.sass */
 .notice {
   width: 100%;
   background-color: #e74c3c;
@@ -27,29 +21,42 @@
   text-align: center;
   color: white; }
 
-/* line 36, app.sass */
 .notice-error {
   background-color: #e74c3c; }
 
-/* line 38, app.sass */
 .notice-black {
   background-color: #333333; }
 
-/* line 40, app.sass */
 .notice-success {
   background-color: #27ae60; }
 
-/* line 45, app.sass */
+.notice-grey {
+  background-color: white;
+  border-bottom: 1px solid #d5d5d5;
+  color: #777777; }
+
+.notice-blue {
+  background-color: #3276b1; }
+
+.name-server {
+  font-size: 22px;
+  color: #d7d7d7;
+  padding: 0.3em;
+  border: 3px dashed #ededed;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  margin-bottom: 2em; }
+
 .form-control, .form-control:focus {
   border: 3px solid #cdcdcd;
   box-shadow: none; }
 
-/* line 50, app.sass */
 .btn.btn-black {
   background-color: #333333;
   color: white; }
 
-/* line 56, app.sass */
 #player {
   position: relative;
   padding-bottom: 56.25%;
@@ -57,7 +64,6 @@
   height: 0;
   overflow: hidden;
   margin-bottom: 2em; }
-  /* line 64, app.sass */
   #player iframe, #player object {
     position: absolute;
     top: 0;
@@ -65,47 +71,58 @@
     width: 100%;
     height: 100%; }
 
-/* line 73, app.sass */
 .entry .duration {
   color: #7f8c8d;
   display: inline-block;
   margin-left: 0.4em; }
 
+a.logo {
+  text-decoration: none;
+  color: #333333; }
+
 @media only screen and (max-width: 767px) {
-  /* line 83, app.sass */
   #search-track {
     margin-bottom: 1em; }
 
-  /* line 87, app.sass */
+  .name-server {
+    width: 100%; }
+
   h1 small {
     font-size: 16px; }
-    /* line 90, app.sass */
     h1 small span.label {
       font-size: 16px; }
 
-  /* line 94, app.sass */
   .entry .pull-left {
     float: none !important; }
-  /* line 96, app.sass */
   .entry .pull-right {
     float: none !important; }
-  /* line 99, app.sass */
   .entry .duration {
     margin-left: none;
     margin-top: 0.3em;
     margin-bottom: 0.6em;
     display: block; }
-  /* line 105, app.sass */
   .entry button#push {
     width: 100%; } }
-/* line 110, app.sass */
 .w100 {
   width: 100%; }
 
-/* line 114, app.sass */
+.w80 {
+  width: 80%; }
+
+.w70 {
+  width: 70%; }
+
+.w60 {
+  width: 60%; }
+
+.w40 {
+  width: 40%; }
+
+.w20 {
+  width: 20%; }
+
 h1 strong {
   font-size: 60px; }
 
-/* line 117, app.sass */
 #results-search {
   margin-top: 2em; }
