@@ -12,7 +12,7 @@ define(function()  {
     run_action: function() {
 
       // Add loading
-      $('#results-search').html('<i class="fa fa-repeat fa-spin fa-3x"></i>');
+      $('#results-search').html('<div class="text-center"><i class="fa fa-repeat fa-spin fa-3x"></i></div>');
 
       // Get the track to search
       var track = $('#search-track').val();
@@ -59,7 +59,7 @@ define(function()  {
       $('#results-search').html('');
 
       // Load template
-      require(['hbs!../app/views/results_search'], function(template) {
+      require(['hbs!../app/views/search/results_search'], function(template) {
 
         var number_list = 0;
 

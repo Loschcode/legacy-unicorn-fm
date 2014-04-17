@@ -7,6 +7,9 @@ define({
 
 	hbs: {
 		templateExtension: '.hbs'
-	}
+	},
+
+	urlArgs: { 'bust': Date.now() }
+
 }); 
 
