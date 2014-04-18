@@ -6,7 +6,11 @@
 		<div class="name">{{name}}</div>
 		<div class="duration">{{duration}}</div>
 	</div>
-	<div class="actions"><a class="btn btn-black" href="#/push"><i class="fa fa-cloud-upload"></i> Push</a></div>
+	<div class="actions pull-right">
+		<form method="post" action="#/push/{{number_list}}">
+			<button type="submit" id="track-{{number_list}}" data-player="{{player}}" data-name="{{name}}" class="btn btn-black"><i class="fa fa-cloud-upload"></i> Push</button>
+		</form>
+	</div>
 </div>
 
 <div class="clear"></div>

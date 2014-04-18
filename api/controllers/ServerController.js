@@ -19,14 +19,18 @@ module.exports = {
   
   pushTrack: function(req, res) {
 
-    var server = req.param('server');
-    var track = {title: req.param('title'), player: req.param('player'), server: server}
+    // Get track pushed
+    var track = {name: req.param('name'), player: req.param('player'), server: req.param('server')}
 
+    // Init socket.io
     var socket = req.socket;
     var io = sails.io;
 
-    io.sockets.emit('message', track);
+    // Now we will send a push to all devices
+    // Ex : 'baba-track-pushed'
+    io.sockets.emit('track-pushed', track);
 
+    // Return the object to the front
     res.json(track);
 
   },

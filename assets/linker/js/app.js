@@ -139,7 +139,7 @@
           $.each(results, function(index, value) {
             
             var player = value.media$group.media$player[0].url;
-
+            
             var durationSeconds = value.media$group.yt$duration.seconds;
 
             // multiplied  by 1000 because Date() requires miliseconds

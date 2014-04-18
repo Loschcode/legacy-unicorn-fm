@@ -1,18 +1,36 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000317}}
 .spacer50 {
   margin-top: 50px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000319}}
 .spacer10 {
   margin-top: 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000321}}
 .spacer20 {
   margin-top: 20px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000323}}
 .spacer40 {
   margin-top: 40px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000328}}
+.text-center {
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000330}}
+.text-left {
+  text-align: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000332}}
+.text-right {
+  text-align: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000335}}
 .clear {
   clear: both; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000340}}
 .notice {
   width: 100%;
   background-color: #e74c3c;
@@ -21,31 +39,39 @@
   text-align: center;
   color: white; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000347}}
 .notice-error {
   background-color: #e74c3c; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000349}}
 .notice-black {
   background-color: #333333; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000351}}
 .notice-success {
   background-color: #27ae60; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000353}}
 .notice-grey {
   background-color: white;
   border-bottom: 1px solid #d5d5d5;
   color: #777777; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000357}}
 .notice-blue {
   background-color: #3276b1; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000365}}
 .form-control, .form-control:focus {
   border: 3px solid #cdcdcd;
   box-shadow: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000370}}
 .btn.btn-black {
   background-color: #333333;
   color: white; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000376}}
 #player {
   position: relative;
   padding-bottom: 56.25%;
@@ -53,6 +79,7 @@
   height: 0;
   overflow: hidden;
   margin-bottom: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000384}}
   #player iframe, #player object {
     position: absolute;
     top: 0;
@@ -60,10 +87,16 @@
     width: 100%;
     height: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\0000393}}
 a.logo {
   text-decoration: none;
-  color: #333333; }
+  color: #333333;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003103}}
 .name-server {
   font-size: 22px;
   color: #d7d7d7;
@@ -75,67 +108,88 @@ a.logo {
   border-radius: 5px;
   margin-bottom: 2em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003116}}
 .entry div.details {
   float: left;
   margin-left: 2em;
   margin-top: 0.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003121}}
 .entry div.actions {
-  float: right;
   margin-top: 0.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003124}}
 .entry div.picture {
   float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003127}}
   .entry div.picture img {
     width: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003129}}
 .entry div.name {
   font-size: 17px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003132}}
 .entry div.duration {
   color: #7f8c8d;
   display: inline-block;
   font-size: 15px; }
 
 @media only screen and (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003145}}
   #search-track {
     margin-bottom: 1em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003148}}
   .name-server {
     width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003151}}
   h1 small {
     font-size: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003154}}
     h1 small span.label {
       font-size: 16px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003158}}
   .entry .pull-left {
     float: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003160}}
   .entry .pull-right {
     float: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003163}}
   .entry .duration {
     margin-left: none;
     margin-top: 0.3em;
     margin-bottom: 0.6em;
     display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003169}}
   .entry button#push {
     width: 100%; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003174}}
 .w100 {
   width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003176}}
 .w80 {
   width: 80%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003178}}
 .w70 {
   width: 70%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003180}}
 .w60 {
   width: 60%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003182}}
 .w40 {
   width: 40%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003184}}
 .w20 {
   width: 20%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003188}}
 h1 strong {
   font-size: 60px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Sites\/unicorn\/assets\/linker\/styles\/app\.sass}line{font-family:\00003191}}
 #results-search {
   margin-top: 2em; }

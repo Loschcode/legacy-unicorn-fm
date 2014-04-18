@@ -67,6 +67,8 @@ define(function()  {
 
           number_list = number_list+1;
 
+          var player = value.media$group.media$player[0].url;
+
           var duration = value.media$group.yt$duration.seconds;
 
           // Transform seconds into hh:mm:ss format
@@ -91,11 +93,14 @@ define(function()  {
           // Init value view datas
           var view_datas = {};
 
+          // Fill view datas
           view_datas.name = value.media$group.media$title.$t;
           view_datas.number_list = number_list;
           view_datas.picture = value.media$group.media$thumbnail[0].url;
           view_datas.duration = duration;
+          view_datas.player = player;
 
+          // Inject into the template
           var view = template(view_datas);
 
           $('#results-search').append(view);

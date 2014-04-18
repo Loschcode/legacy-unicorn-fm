@@ -19,8 +19,11 @@ require(['../app/config/require_config'], function(config) {
 
 					require(['../app/controllers/' + controller + '_controller'], function(object) {
 
+						console.log(object);
+
 						object.init(params);
 						object[action + '_action'](params);
+
 					});
 
 				}
@@ -74,7 +77,58 @@ require(['../app/config/require_config'], function(config) {
 		var socket = Socket_io.connect();
 
 		// --- Add your sockets events here ---
+		socket.on('track-pushed', function (datas) {
 
+			// One guy pushed a track
+			// What's the server targeted ?
+			var server_targeted = datas.server;
+
+			// What's the current server 
+			var server_current  = $('#join-datas').data('server');
+
+			// Check if the current server equal to the targeted server
+			if (server_targeted == server_current) {
+
+				// It's the right server !
+				// Are you the owner of the server ?
+				var owner = $('#join-datas').data('owner');
+
+				if (owner == true) {
+
+					// Get the iframe youtube template
+					require(['hbs!../app/views/socket/youtube_iframe'], function(template) {
+
+						// Get the player from datas
+						var player = datas.player;
+
+						// Transform player
+          				player = player.split('https://www.youtube.com/watch?v=').join('');
+          				player = player.split('&feature=youtube_gdata_player').join('');
+
+						var view_datas = {
+
+							player: player
+
+						};
+
+						var view = template(view_datas);
+
+						$('#player').html(view);
+
+					});
+
+				}
+
+				// Get the title
+				var name = datas.name;
+
+				console.log(name);
+
+        		$('#current-track').html(name);
+
+			}
+
+		});
 
 
 	});
