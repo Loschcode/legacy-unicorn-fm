@@ -5,6 +5,9 @@
  * @description :: It's all about the users
  */
 
+// Data encryption lib
+var bcrypt = require('bcrypt');
+
 module.exports = {
 
   adapter: 'mongo',
@@ -36,7 +39,6 @@ module.exports = {
      */
     email: {
       type: 'string',
-      required: true
     },
 
     /**
@@ -48,7 +50,20 @@ module.exports = {
       required: true
     }
 
-  }
+  },
 
+  beforeCreate: function(values, next) {
+
+      // We encrypt the password before creating the user
+      bcrypt.hash(values.encrypted_password, 10, function(err, hash) {
+
+        if (err) return next(err);
+
+        values.encrypted_password = hash;
+        next();
+
+      });
+
+    }
 
 };
