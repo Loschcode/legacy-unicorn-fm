@@ -48,6 +48,30 @@ module.exports = {
     role: {
       type: 'string',
       required: true
+    },
+
+    /**
+     * Sensitive details :
+     * Contains all the sensitive details from the user
+     */
+    sensitive_details: {
+
+      /**
+       * Last Ip :
+       * THe last IP of the user
+       */
+      last_ip: {
+        type: 'string',
+      },
+
+      /**
+       * Country :
+       * The user country (e.g. 'france')
+       */
+      country: {
+        type: 'string',
+      }
+
     }
 
   },

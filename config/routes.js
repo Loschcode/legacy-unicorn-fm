@@ -30,7 +30,7 @@ module.exports.routes = {
 
   // Home
   '/': 'Home.index',
-  '/test': 'Home.test',
+  '/whoami': 'Home.whoami',
 
   // Server
   '/create': 'Server.create',

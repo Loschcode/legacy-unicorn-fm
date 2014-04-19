@@ -10,9 +10,6 @@
 
 module.exports = function(req, res, next) {
 
-  var test = dates.uniqid_from_time();
-  console.log(test);
-
   // If the user is already in session
   if (req.session.user) {
 

@@ -17,7 +17,10 @@ module.exports = {
     
   },
 
-  test: function (req, res) {
+  /**
+   * Only in dev mode get some reply about who you are
+   */
+  whoami: function (req, res) {
 
     Users.findOne({id: req.session.user.id}, function(err, user) {
 
