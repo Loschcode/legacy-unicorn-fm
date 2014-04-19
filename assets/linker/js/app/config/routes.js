@@ -2,7 +2,6 @@ define(function() {
 
 	var routes = [
 
-		['get', '', 'home', 'auto_focus'],
 		['post', '#/search', 'search', 'run'],
 		['post', '#/push/:id', 'track', 'push'],
 		['get', '#/join', 'home', 'display_join_input'],

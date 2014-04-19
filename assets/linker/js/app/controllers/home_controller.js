@@ -17,6 +17,7 @@ define(function()  {
 
   	display_join_input_action: function() {
 
+      console.log('here');
 		  $('#join-link').removeClass('show').addClass('hidden');
     	$('#join-form').removeClass('hidden').addClass('show');
     	$('#join-name').focus();
@@ -25,7 +26,7 @@ define(function()  {
 
   	redirect_join_action: function() {
 
-  		// Get value of the input text
+  		  // Get value of the input text
       	var name = $('#join-name').val();
 
 	      // If not empty
