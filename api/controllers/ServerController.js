@@ -8,8 +8,8 @@
 /**
  * Let's load our helpers !
  */
-var variable_helper = require('../helpers/variable_helper.js'),
-    string_helper = require('../helpers/string_helper.js');
+var variables = require('../services/variables.js'),
+    strings = require('../services/strings.js');
 
 module.exports = {
   
@@ -51,7 +51,7 @@ module.exports = {
     }).done(function(error, server) {
 
       // Error query or no result match !
-      if (!variable_helper.exists(error)) {
+      if (!variables.exists(error)) {
 
         // Create session
         req.session.errorMsg = 'Unable to join this server';
@@ -84,7 +84,7 @@ module.exports = {
 
       // We generate a name
       var name = '';
-      name = string_helper.random_readable(4);
+      name = strings.random_readable(4);
       name = name.toLowerCase();
 
       // Get the current session of the user

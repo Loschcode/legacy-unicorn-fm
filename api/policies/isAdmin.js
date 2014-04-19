@@ -8,8 +8,10 @@
  */
 module.exports = function(req, res, next) {
 
-  if (req.session.is_an_admin === true) {
+  if (req.session.user.role === 'admin') {
+
     return next();
+    
   }
 
   return res.redirect('/admin/login');

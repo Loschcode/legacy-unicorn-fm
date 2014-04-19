@@ -1,5 +1,5 @@
 /**
- * userCheck
+ * setAnonymous
  *
  * @module      :: Policy
  * @description :: Simple policy to allow any authenticated user
@@ -7,6 +7,7 @@
  * @docs        :: http://sailsjs.org/#!documentation/policies
  *
  */
+
 module.exports = function(req, res, next) {
 
   // If the user is already in session
@@ -22,6 +23,7 @@ module.exports = function(req, res, next) {
   		 * Let's create a new anonymous user
   		 * 
   		 */
+      
   		Users.create({
 
   			nickname: 'Anonymous',
@@ -38,7 +40,7 @@ module.exports = function(req, res, next) {
   			} else {
 
               req.session.user = user;
-              
+
               return next();
 
           }

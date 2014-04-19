@@ -6,13 +6,34 @@
  *
  */
 
+var sessions = require('../services/sessions.js');
+
 module.exports = {
+
+  /**
+   * Admin dashboard
+   */
+  dashboard: function(req, res) {
+
+    res.view();
+
+  },
 
   /**
    * Login view
    */
   login: function (req, res) {
-    res.view();  
+
+    if (sessions.user_has_role(req, 'admin')) {
+
+      res.redirect('/admin/dashboard');
+
+    } else {
+    
+      res.view();  
+
+    }
+
   },
 
   /**
@@ -22,29 +43,12 @@ module.exports = {
     
     // Get values
     var password = req.param('password');
-    var redirectTo = req.param('redirect-to');
 
     // Check if the right password
     if (password == 'unicornrocks') {
 
-      // Ok, now you are logged as admin
-      req.session.is_an_admin = true;
-
-      // Check if exist redirect
-      if (redirectTo.length > 0 && redirectTo !== 'undefined') {
-
-        // Delete redirectTo session
-        delete req.session.redirectTo;
-
-        // Redirect user
-        return res.redirect(redirectTo);
-
-      } else {
-
-        // No redirect, just display great msg 
-        req.session.success = 'Logged as admin';
-
-      }
+      req.session.user = {};
+      req.session.user.role = 'admin';
 
     } else {
 
@@ -63,7 +67,7 @@ module.exports = {
    */
   logout_exec: function (req, res) {
 
-    delete req.session.is_an_admin;
+    delete req.session.user;
 
     req.session.success = 'Disconnected';
 

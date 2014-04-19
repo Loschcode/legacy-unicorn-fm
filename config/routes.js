@@ -37,7 +37,8 @@ module.exports.routes = {
   '/push-track': 'Server.push_track',
 
   // Admin
-  '/admin' : 'Admin.login',
+  '/admin' : 'Admin.dashboard',
+  '/admin/dashboard' : 'Admin.dashboard',
   '/admin/login': 'Admin.login',
   '/admin/login-exec': 'Admin.login_exec',
   '/admin/logout': 'Admin.logout_exec',

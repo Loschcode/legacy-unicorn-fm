@@ -20,9 +20,17 @@ module.exports.policies = {
 
   ServerController: {
 
-  	'*': 'userCheck'
+  	'*': 'setAnonymous'
+
+  },
+
+  AdminController: {
+
+  	'*': true,
+  	'dashboard': 'isAdmin'
 
   }
+
   /*NameController: {
 
   	'*': false,
