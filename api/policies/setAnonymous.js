@@ -10,11 +10,14 @@
 
 module.exports = function(req, res, next) {
 
+  var test = dates.uniqid_from_time();
+  console.log(test);
+
   // If the user is already in session
   if (req.session.user) {
 
   		// We go to the next policies
-  	    return next();
+  	   return next();
 
   	} else {
 
@@ -26,7 +29,7 @@ module.exports = function(req, res, next) {
       
   		Users.create({
 
-  			nickname: 'Anonymous',
+  			nickname: 'Anonymous' + dates.uniqid_from_time(),
   			encrypted_password: 'anonymous',
   			email: '',
   			role: 'anonymous'

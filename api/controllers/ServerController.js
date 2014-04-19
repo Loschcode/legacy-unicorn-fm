@@ -5,12 +5,6 @@
  * @description	:: It contains all the server listener/creation/pushing system
  */
 
-/**
- * Let's load our helpers !
- */
-var variables = require('../services/variables.js'),
-    strings = require('../services/strings.js');
-
 module.exports = {
   
   /**

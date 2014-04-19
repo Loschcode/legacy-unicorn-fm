@@ -6,6 +6,7 @@
  * @docs        :: http://sailsjs.org/#!documentation/policies
  *
  */
+
 module.exports = function(req, res, next) {
 
   if (req.session.user.role === 'admin') {

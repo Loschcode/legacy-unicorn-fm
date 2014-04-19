@@ -6,8 +6,6 @@
  *
  */
 
-var sessions = require('../services/sessions.js');
-
 module.exports = {
 
   /**
