@@ -133,6 +133,10 @@ define(function()  {
       $('#results-search').html('');
       $('#clear-results').removeClass('visible').addClass('hidden');
 
+      $('#search-track').val('');
+      $('#search-track').focus();
+
+
     }
 
   }

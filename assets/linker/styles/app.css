@@ -78,6 +78,9 @@
   border: none !important;
   box-shadow: none !important; }
 
+input[type="text"]:focus {
+  border-color: #333333; }
+
 .btn.btn-black {
   background-color: #333333;
   color: white; }
