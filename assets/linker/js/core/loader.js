@@ -19,8 +19,6 @@ require(['../app/config/require_config'], function(config) {
 
 					require(['../app/controllers/' + controller + '_controller'], function(object) {
 
-						console.log(object);
-
 						object.init(params);
 						object[action + '_action'](params);
 

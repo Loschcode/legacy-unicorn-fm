@@ -2,10 +2,16 @@ define(function()  {
 
   var Search = {
 
-    url_search: 'https://gdata.youtube.com/feeds/api/videos?alt=@type&q=@search&max-results=@max-results',
+    url_search: 'https://gdata.youtube.com/feeds/api/videos?alt=@type&q=@search&max-results=@max-results&orderBy=@order-by',
     max_results_search: 20,
 
     init: function() {
+      
+      $(document).on('click', '#clear-results', function() {
+
+        Search.clear_results_action();
+
+      });
 
     },
 
@@ -47,6 +53,9 @@ define(function()  {
       query = query.split('@type').join('json');
       query = query.split('@search').join(search);
       query = query.split('@max-results').join(this.max_results_search);
+      query = query.split('@order-by').join('viewCount');
+
+      console.log(query);
 
       // Done, just return the query
       return query;
@@ -107,7 +116,7 @@ define(function()  {
 
         });
 
-
+        $('#clear-results').removeClass('hidden').addClass('visible');
 
       });
 
@@ -115,7 +124,14 @@ define(function()  {
 
     display_no_results: function() {
 
-      $('#results-search').html('<div class="alert alert-danger">Ooops, no results dude !</div>');
+      $('#results-search').html('<div class="notice notice-red no-results">Snap ! No results dude</div>');
+
+    },
+
+    clear_results_action: function() {
+
+      $('#results-search').html('');
+      $('#clear-results').removeClass('visible').addClass('hidden');
 
     }
 

@@ -1,9 +1,11 @@
 <div id="join-datas" data-owner="<%= owner %>" data-server="<%= server %>"></div>
 
-<div class="notice notice-blue">
-    <span id="current-track">No current track</span>
+<div class="notice notice-black">
+    <div class="server-name pull-left"><span class="sharp">#</span><%= server %></div>
+    <div class="divider pull-left"><i class="fa fa-angle-right"></i></div>
+    <div id="current-track" class="current-track pull-left">No current track</div>
+    <div class="clear"></div>
 </div>
-
 
 
 <div class="spacer20"></div>
@@ -14,16 +16,17 @@
 
 
     <div class="spacer20"></div>
-        <div class="name-server">Server #<%= server %></div>
-    <div class="spacer20"></div>
 
-    <form method="post" action="#/search" class="form-inline">
-    	<input id="search-track" class="form-control input-lg" type="text" name="search" placeholder="Search track to listen" autocomplete="off" spellcheck="false"/>
+    <div class="search">
+        <form method="post" action="#/search" class="form-inline">
+        	<input id="search-track" class="form-control input-lg input-search" type="text" name="search" placeholder="Search track to listen" autocomplete="off" spellcheck="false"/>
+        
+        	<button type="submit" class="btn btn-black btn-lg" href="#/search">Search</button>
+            <a id="clear-results" class="btn btn-danger btn-lg hidden"><i class="fa fa-times"></i></a>
+
+        </form>
+    </div>
     
-    	<button type="submit" class="btn btn-black btn-lg" href="#/search">Search</button>
-        <a id="clear-results" class="btn btn-danger btn-lg hidden"><i class="fa fa-times"></i></a>
-
-    </form>
 
 </div>
     
