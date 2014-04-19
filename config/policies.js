@@ -18,13 +18,13 @@ module.exports.policies = {
   // (`true` allows public access) 
   '*': true, 
 
-  NameController: {
+  /*NameController: {
 
   	'*': false,
   	create: 'isAnAdmin',
-  	createExec: 'isAnAdmin'
+  	create_exec: 'isAnAdmin'
 
-  }
+  }*/
 
   /*
 	// Here's an example of adding some policies to a controller

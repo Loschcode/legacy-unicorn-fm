@@ -35,12 +35,11 @@ module.exports.routes = {
   '/': 'Home.index',
   '/create': 'Server.create',
   '/join/:name': 'Server.join',
-  '/push-track': 'Server.pushTrack',
-  '/create-name': 'Name.create',
-  '/create-name-exec': 'Name.createExec',
+  '/push-track': 'Server.push_track',
+  '/admin' : 'Admin.login',
   '/admin/login': 'Admin.login',
-  '/admin/login-exec': 'Admin.loginExec',
-  '/admin/logout': 'Admin.logout',
+  '/admin/login-exec': 'Admin.login_exec',
+  '/admin/logout': 'Admin.logout_exec',
   '/test': 'Home.test'
 
   /*

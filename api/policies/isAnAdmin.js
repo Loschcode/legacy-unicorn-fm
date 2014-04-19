@@ -1,5 +1,5 @@
 /**
- * isAnAdmin
+ * is_an_admin
  *
  * @module      :: Policy
  * @description :: Simple policy to allow any admin user
@@ -8,7 +8,7 @@
  */
 module.exports = function(req, res, next) {
 
-  if (req.session.isAnAdmin === true) {
+  if (req.session.is_an_admin === true) {
     return next();
   }
 

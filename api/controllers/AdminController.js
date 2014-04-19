@@ -2,28 +2,23 @@
  * AdminController
  *
  * @module      :: Controller
- * @description	:: A set of functions called `actions`.
+ * @description	:: It contains all the admin section
  *
- *                 Actions contain code telling Sails how to respond to a certain type of request.
- *                 (i.e. do stuff, then send some JSON, show an HTML page, or redirect to another URL)
- *
- *                 You can configure the blueprint URLs which trigger these actions (`config/controllers.js`)
- *                 and/or override them with custom routes (`config/routes.js`)
- *
- *                 NOTE: The code you write here supports both HTTP and Socket.io automatically.
- *
- * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
 
 module.exports = {
-    
-  
 
+  /**
+   * Login view
+   */
   login: function (req, res) {
     res.view();  
   },
 
-  loginExec: function (req, res) {
+  /**
+   * Execute the login process
+   */
+  login_exec: function (req, res) {
     
     // Get values
     var password = req.param('password');
@@ -33,7 +28,7 @@ module.exports = {
     if (password == 'unicornrocks') {
 
       // Ok, now you are logged as admin
-      req.session.isAnAdmin = true;
+      req.session.is_an_admin = true;
 
       // Check if exist redirect
       if (redirectTo.length > 0 && redirectTo !== 'undefined') {
@@ -63,9 +58,12 @@ module.exports = {
 
   },
 
-  logout: function (req, res) {
+  /**
+   * Execute the logout process
+   */
+  logout_exec: function (req, res) {
 
-    delete req.session.isAnAdmin;
+    delete req.session.is_an_admin;
 
     req.session.success = 'Disconnected';
 
