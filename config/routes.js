@@ -28,20 +28,21 @@
 
 module.exports.routes = {
 
-  // By default, your root route (aka home page) points to a view
-  // located at `views/home/index.ejs`
-  // 
-  // (This would also work if you had a file at: `/views/home.ejs`)
+  // Home
   '/': 'Home.index',
+  '/whoami': 'Home.whoami',
+
+  // Server
   '/create': 'Server.create',
   '/join/:name': 'Server.join',
-  '/push-track': 'Server.pushTrack',
-  '/create-name': 'Name.create',
-  '/create-name-exec': 'Name.createExec',
+  '/push-track': 'Server.push_track',
+
+  // Admin
+  '/admin' : 'Admin.dashboard',
+  '/admin/dashboard' : 'Admin.dashboard',
   '/admin/login': 'Admin.login',
-  '/admin/login-exec': 'Admin.loginExec',
-  '/admin/logout': 'Admin.logout',
-  '/test': 'Home.test'
+  '/admin/login-exec': 'Admin.login_exec',
+  '/admin/logout': 'Admin.logout_exec',
 
   /*
   // But what if you want your home page to display
