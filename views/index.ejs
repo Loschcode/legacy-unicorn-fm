@@ -1,0 +1,165 @@
+<% layout('layout') %>
+
+<!-- Datas object unicorn -->
+<div id="unicorn-datas">
+    <div id="device-datas" data-infos="<%= JSON.stringify(device) %>"></div>
+    <div id="server-datas" data-infos="{}"></div>
+    <div id="referent-datas" data-infos="{}"></div>
+    <div id="user-datas" data-infos="{}"></div>
+    <div id="media-datas" data-infos="{}"></div>
+    <div id="options-datas" data-infos="{}"></div>
+    <div id="player-datas" data-infos="{}"></div>
+    <div id="flag-datas" data-infos="{}"></div>
+</div>
+
+
+<!-- Content -->
+<div>
+
+    <div class="notice notice-black fixed header-nav">
+
+        <div id="left-header" class="pull-left mw40">
+
+            <div class="home-button pull-left">
+                <a href="/"><i class="fa fa-chevron-left"></i></a>
+            </div>
+
+            <div class="server-name pull-left">
+                <span class="sharp">#</span><span id="server-name" class="server-can-edit name">Unicorn</span>
+            </div>
+
+            <div class="divider pull-left"><i class="fa fa-angle-right"></i></div>
+
+        </div>
+
+        <div id="right-header" class="pull-right mw60 pt02 hidden">
+
+            <!-- PLAYER BUTTON + PEOPLE -->
+            <div class="people w10 pull-right">
+                <span id="people">0</span> <i class="fa fa-user icon-m"></i>
+            </div>
+
+            <div class="watcher w10 pull-right">
+
+                <a id="watch" class="player-button unselected">PLAYER</a>
+                
+            </div>
+
+            <!-- RESEARCH + SYNC -->
+            <div class="search pull-right relative mw40">
+
+                <form id="form-search-track" method="post" action="" class="form-inline">
+
+                    <input id="search-track" class="form-control input-lg input-search hidden" type="search" name="search" placeholder="Search track to listen" autocomplete="off" spellcheck="false"/>
+
+                    <div id="clear-results" class="clear-result" style="display: none;">
+
+                        <a><i class="fa fa-times"></i></a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="w20 pull-right text-right">
+
+                <div class="sync-icon-container pull-right">
+                    <div id="sync-icon" class="sync high"></div>
+                </div>
+                
+                <div class="sync-container pull-right">
+                    <a id="sync" class="player-button selected middle">SYNC</a>
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <!-- Punchline -->
+    <div class="container text-center block-logo-join">
+
+        <div class="spacer50"></div>
+        <div class="spacer20"></div>
+
+
+    </div>
+
+    <!-- Template Home -->
+    <div id="ajax-template-home" class="block-home">
+
+        <!-- Results -->
+        <div class="anti-container">
+            <ul id="results-search" class="list">
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="player-unicorn" class="player">
+
+
+    <div class="row">
+
+        <div id="thumb" class="pull-left thumb">
+            <div id="loader">
+            </div>
+            <div id="buffer">
+            </div>
+        </div>
+
+
+        <div class="pull-left container-play-track">
+
+            <div id="player-control" class="pull-left control">
+                <a id="player-play"><i class="fa fa-play"></i></a>
+            </div>
+
+            <div class="pull-left track">
+                <span id="track">No current track</span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="pull-left duration">
+
+                <div class="pull-left block-slider">
+                    <div id="duration"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pull-right volume">
+
+            <div id="fullscreen-icon" class="pull-left fullscreen-icon">
+                <i class="fa fa-arrows-alt"></i>
+            </div>
+
+            <div id="volume-icon" class="pull-left volume-icon">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="pull-left block-slider">
+                <div id="volume"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="spacer100"></div>
+
+<div id="player"></div>
+

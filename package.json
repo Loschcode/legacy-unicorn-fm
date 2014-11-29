@@ -1,21 +1,40 @@
 {
-    "name": "unicorn",
-    "private": true,
-    "version": "0.0.0",
-    "description": "Manage your music like a boss",
-    "dependencies": {
-        "sails": "0.9.15",
-        "grunt": "0.4.1",
-        "sails-disk": "~0.9.0",
-        "ejs": "0.8.4",
-        "optimist": "0.3.4"
-    },
-    "scripts": {
-        "start": "node app.js",
-        "debug": "node debug app.js"
-    },
-    "main": "app.js",
-    "repository": "",
-    "author": "Ges Jeremie",
-    "license": "No open source"
+  "name": "unicorn",
+  "version": "0.0.4a",
+  "private": true,
+
+  "scripts": {
+    "start": "./node_modules/.bin/supervisor DEBUG=unicorn ./bin/www",
+    "debug": "node-debug ./node_modules/.bin/supervisor DEBUG=unicorn ./bin/www"
+  },
+
+  "dependencies": {
+
+    "supervisor": "*",
+    "underscore": "*",
+
+    "mongoose": "*",
+    "mongoose-validator": "*",
+
+    "express-session": "*",
+
+    "winston": "*",
+    "date-utils": "*",
+    "sha1": "*",
+    "crypto": "*",
+    
+    "async": "0.7.0",
+    "socket.io": "1.1.0",
+
+    "express": "~4.2.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
+    "ejs-locals": "*"
+
+  }
+
 }

@@ -1,0 +1,26 @@
+<div id="ajax-template-chronicles">
+	
+	<table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Track</th>
+          <th>When</th>
+        </tr>
+      </thead>
+      <tbody>
+
+		{{#each chronicles}}
+			<tr>
+				<td>{{#each users}} {{nickname}} {{/each}}</td>
+				<td>{{media.title}}</td>
+				<td>Never</td>
+			</tr>
+		{{/each}}
+
+      </tbody>
+    </table>
+
+	</ul>
+
+</div>

@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var debug = require('debug')('unicorn');
+var app = require('../app');
+
+var $h = require(__ROOT__ + '/api/helpers');
+
+app.set('port', process.env.PORT || $h.configs.system.port);
+
+var server = app.listen(app.get('port'), function() {
+
+  $h.logs.info('Express server listening on port ' + server.address().port);
+  
+});
+

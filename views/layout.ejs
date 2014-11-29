@@ -7,24 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Favicon -->
-    <link rel="unicorn favicon" type="image/x-icon" href="/images/unicorn-favicon.ico" />
+    <link rel="shortcut icon" href="/images/unicorn-favicon.ico" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
 
     <!-- Fontawesome -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/linker/styles/app.css">
+    <!-- Mmenu -->
+    <link rel="stylesheet" href="/linker/js/app/libs/foreign/mmenu/src/css/jquery.mmenu.css" />
+    <link type="text/css" rel="stylesheet" href="/linker/js/app/libs/foreign/mmenu/src/css/extensions/jquery.mmenu.positioning.css" />
+
+    <!-- JqueryUI -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+    <!-- Pnotify -->
+    <link rel="stylesheet" href="/linker/js/app/libs/foreign/pnotify/pnotify.custom.min.css" />
+
+    <!-- App -->
+    <link rel="stylesheet" href="/linker/styles/app/app.css">
 
   </head>
 
   <body id="main">
 
     <%- body %>
-
-    <!-- Load app frontend -->
-    <script data-main="/linker/js/core/loader" src="/linker/js/core/require.js"></script>
+    
+    <!-- Load App -->
+    <script data-main="/linker/js/strike" src="/linker/js/core/dependencies/require.js"></script>
 
 
   </body>

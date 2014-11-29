@@ -1,0 +1,391 @@
+//
+// Unicorn 
+// Copyright 2014, Unicorn team
+// www.unicornfm.com
+//
+
+// Main
+// ==================================================
+// Description :: All styles for pages
+// 
+
+.buffering-black
+	background-color: black
+	opacity: 0.4
+	filter: alpha(opacity=40) /* For IE8 and earlier */
+
+.buffering-loader
+	position: absolute
+	margin-top: 25px
+	margin-left: 50px
+	display: inline-block
+
+.block-home
+	margin-top: -1.5em
+	margin-bottom: -2.5em
+
+.search-loader
+	margin-top: 10em
+
+.watcher
+	margin-right: 1em
+	margin-top: 0.3em
+	color: white
+
+	a
+		color: white
+		cursor: pointer
+
+	i.fa
+		font-size: 25px
+
+.people
+	margin-right: 1.4em
+	margin-top: 0.5em
+
+	i.fa
+		font-size: 17px
+
+a#watch
+	text-decoration: none
+	display: inline-block
+
+.player-button
+
+	font-size: 17px
+	
+	&.unselected
+		color: #999
+
+	&.selected
+		color: white
+
+.current-track
+
+	text-align: left
+	margin-left: 0.4em
+	margin-top: 9px
+
+	// Marquee
+	overflow: hidden
+	width: 400px
+
+.no-rests 
+	width: 30%
+	margin: 
+		right: auto
+		left: auto
+	border-radius: 5px
+a.logo
+	text-decoration: none
+	color: #333
+	width: 40%
+	margin-left: auto
+	margin-right: auto
+	display: block
+
+// #Join
+
+input.rename-server
+	color: white
+	background: transparent
+	outline: 0
+	border: 0
+	width: 1em
+	padding: 0
+	max-width: 10em
+
+.trigger-menu-right
+	margin-right: 2em
+	margin-top: 0.4em
+	display: block
+
+	i
+		color: white
+
+
+.entry
+	
+	div.details
+		float: left
+		margin-left: 2em
+		margin-top: 0.5em
+
+	div.actions
+		margin-top: 0.5em
+
+	div.picture
+		float: left
+
+		img
+			width: 100px
+	div.name
+		font-size: 17px
+	
+	div.duration
+		color: #7F8C8D
+		display: inline-block
+		font-size: 15px
+
+.home-button
+
+	font-size: 20px
+	padding-left: 1em
+	padding-top: 0.4em
+
+	a
+		text-decoration: none
+		color: white
+
+.server-button
+
+	font-size: 20px
+	padding-left: 1em
+	padding-top: 0.3em
+
+	div.arrow
+
+		padding-top: 0.3em
+
+	a
+		text-decoration: none !important
+		color: black !important
+
+.server-name 
+	padding-left: 2em
+	font-size: 25px
+
+.sharp
+	font-size: 18px
+
+.divider
+	margin-left: 1em
+	font-size: 17px
+	padding-top: 7px
+
+.input-search
+	width: 80% !important
+	padding-right: 2em
+
+/* Subscribe */
+
+.form-box 
+	input
+		width: 100%
+		padding: 10px
+		text-align: center
+		height: 60px
+		border: 1px solid #ccc
+		background: #fafafa
+		transition: 0.2s ease-in-out
+		font-size: 17px
+
+	input:focus
+		outline: 0
+		background: #eee
+
+	input[type="text"], input[type="text"]:focus
+		border-radius: 5px 5px 0 0
+
+
+	input[type="password"]
+		border-radius: 0 0 5px 5px
+		border-top: 0
+
+	button
+		padding: 15px 16px
+		border-radius: 5px
+
+.input-search:focus
+	/* border-color: #333 !important */
+
+.clear-result
+
+	z-index: 10
+	position: absolute
+	right: 40px
+	top: 5px
+
+	a
+		color: black
+
+/* Navbar home */
+.welcome-text
+	display: inline-block
+	margin-right: .5em
+
+
+h1
+	strong
+		font-size: 60px
+
+#results-search
+	position: relative
+	width: 100%
+	// margin-top: 2em
+
+img.preview
+	width: 150px
+	margin-top: 1em
+
+/* Footer */
+
+.nav-black-background 
+
+	// Background
+	background: #373737 /* Old browsers */
+	background: -moz-linear-gradient(top,  #373737 0%, #242424 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#373737), color-stop(100%,#242424)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #373737 0%,#242424 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #373737 0%,#242424 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #373737 0%,#242424 100%) /* IE10+ */
+	background: linear-gradient(to bottom,  #373737 0%,#242424 100%) /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#242424',GradientType=0 ) /* IE6-9 */
+
+.nav-black-background-reversed
+
+	background: #242424
+	background: -moz-linear-gradient(top, #242424 0%, #373737 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242424), color-stop(100%,#373737))
+	background: -webkit-linear-gradient(top, #242424 0%,#373737 100%)
+	background: -o-linear-gradient(top, #242424 0%,#373737 100%)
+	background: -ms-linear-gradient(top, #242424 0%,#373737 100%)
+	background: linear-gradient(to bottom, #242424 0%,#373737 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#373737',GradientType=0 )
+
+.player
+	z-index: 90
+	border-top: 1px solid #2a2a2a
+	position: fixed
+	height: 89px
+	bottom: 0
+	width: 100%
+	color: white
+	@extend .nav-black-background-reversed
+
+	.thumb
+		background-color: black
+		width: 123px
+		height: 92px
+		
+		img
+			height: 92px
+
+	.control
+		a
+			cursor: pointer
+			color: white
+			font-size: 25px
+
+	.container-play-track
+		margin-top: 1em
+		width: 70%
+
+		.control
+			margin-left: 1.4em
+
+		.track
+			font-size: 25px
+			margin-left: 0.6em
+
+	.duration
+		cursor: pointer
+		width: 80%
+		margin-top: 0.3em
+		margin-left: 1.4em
+
+		.block-slider
+			width : 600px
+			height: 20px
+			margin-left: 2.5em
+			margin-bottom: 0.35em
+
+		.ui-slider
+			background: #d5d5d5
+			border-radius: 0px
+			border: 0px
+
+		.ui-widget-header
+			background: #3498DB
+			border: 0px
+			border-radius: 0px
+
+		.ui-state-default,
+		.ui-state-focus,
+		.ui-handler
+			outline: 0
+			border: 0px
+			border-radius: 0px
+			background: #2980B9
+			display: none
+
+	.volume
+		cursor: pointer
+		width: 18%
+		margin-top: 2em
+		margin-right: 1.4em
+
+		.fullscreen-icon
+			margin-right: 0.5em
+			width: 30px
+
+		.volume-icon
+			width: 30px
+
+		.fa
+			font-size: 24px
+
+		.block-slider
+			width : 130px
+			height: 13px
+			margin-left: 1em
+			margin-top: 0.35em
+
+		.ui-slider
+			background: #d5d5d5
+			border-radius: 0px
+			border: 0px
+
+		.ui-widget-header
+			background: #3498DB
+			border: 0px
+			border-radius: 0px
+
+		.ui-state-default,
+		.ui-state-focus,
+		.ui-handler
+			outline: 0
+			border: 0px
+			border-radius: 0px
+			background: #2980B9
+			display: none
+
+.header-nav
+	width: 100%
+	border-top: 1px solid #2a2a2a
+	height: 48px
+	padding-top: 4px
+	@extend .nav-black-background
+
+.like-button
+	cursor: pointer
+
+.ui-pnotify-container
+	background: #3498DB
+	color: white
+	border: 0px
+
+.alert-danger.ui-pnotify-container
+	background: #E74C3C
+
+
+#player
+
+	width: 100%
+	height: 100%
+
+	iframe, object
+		width: 0px
+		height: 0px
+
+		
