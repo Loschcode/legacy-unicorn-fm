@@ -1,2 +1,3 @@
-# unicorn2
-### a Sails application
+# Unicorn v2
+
+### Getting started 
