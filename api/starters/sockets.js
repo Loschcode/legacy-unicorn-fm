@@ -17,7 +17,6 @@ module.exports = function() {
 	 */
 	var http = require("http"),
 		server = http.createServer().listen($h.configs.sockets.port);
-
 	/**
 	 * We load and inject SocketIO (Verbosity depending on the environment)
 	 */

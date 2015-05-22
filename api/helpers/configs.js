@@ -79,7 +79,8 @@ module.exports = {
 
 	searches: {
 		   
-	    max_results: 40 // How many results to display at max
+	    max_results: 40, // How many results to display at max
+	    youtube_api_key: 'AIzaSyCScG8VsrHH1Eww0JBguQKoD7OZpXWt9nY'
 
 	},
 
